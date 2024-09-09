@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import json
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 def scrape_news():
     response = requests.get('https://www.moneycontrol.com/news/india/')
