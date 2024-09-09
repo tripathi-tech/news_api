@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 app = Flask(__name__)
 
 # CORS configuration to allow localhost and the Vercel app
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["https://mnews-tawny.vercel.app", "https://news-api-ten-omega.vercel.app"]}})
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["https://newsbharat.vercel.app", "https://news-api-ten-omega.vercel.app"]}})
 
 def scrape_news():
     response = requests.get('https://www.moneycontrol.com/news/india/')
