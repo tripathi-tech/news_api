@@ -2,9 +2,10 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import requests
 from bs4 import BeautifulSoup
-import json
 
 app = Flask(__name__)
+
+# CORS configuration to allow localhost and the Vercel app
 CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["http://localhost:3000", "https://news-api-ten-omega.vercel.app"]}})
 
 def scrape_news():
