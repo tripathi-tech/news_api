@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import json
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["http://localhost:3000", "https://news-1u4o0wxg4-tripathitechs-projects.vercel.app"]}})
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["http://localhost:3000", "https://news-api-ten-omega.vercel.app"]}})
 
 def scrape_news():
     response = requests.get('https://www.moneycontrol.com/news/india/')
