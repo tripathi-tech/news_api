@@ -5,7 +5,7 @@
     ],
     "routes": [
       {
-        "src": "/news",
+        "src": "/(.*)",
         "methods": ["GET", "OPTIONS"],
         "headers": {
           "Access-Control-Allow-Credentials": "true",
